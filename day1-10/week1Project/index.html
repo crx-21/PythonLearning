@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather API</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="main">
+      <h1>Weather App</h1>
+      <p>Enter a city name to get current weather</p>
+
+      <div class="input-group">
+        <input type="text" placeholder="Enter city name (e.g., London, UK)" id="cityInput">
+        <button id="searchWeatherBtn">Search</button>
+      </div>
+
+      <div id="loading" class="hidden">Loading...</div>
+
+      <div id="error" class="hidden error-message"></div>
+
+      <div id="weatherCard" class="hidden weather-card">
+        <h2 id="cityName"></h2>
+        <p id="description"></p>
+        <div class="weather-main">
+          <span class="temp" id="temperature">--°C</span>
+          <span id="weatherIcon" class="weather-icon" aria-label="Weather icon"></span>
+        </div>
+        <div class="weather-details">
+          <div class="detail">
+            <span class="label">Feels like</span>
+            <span class="value" id="feelsLike">--°C</span>
+          </div>
+          <div class="detail">
+            <span class="label">Humidity</span>
+            <span class="value" id="humidity">--%</span>
+          </div>
+          <div class="detail">
+            <span class="label">Wind</span>
+            <span class="value" id="windSpeed">-- km/h</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
