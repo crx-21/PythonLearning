@@ -8,7 +8,27 @@ choice = int(input("Your chosen game:"))
 
 match choice:
     case 1:
-        print("Treasure Game")
+        print("Welcome to the Treasure Island.\n Your mission is to find the treasure.")
+        decision = input("\nWhich path to do you take? Left or Right \n")
+        if decision == "left":
+            decision = input("\nWhat do you do Swim or Wait \n")
+            if decision == "wait":
+                decision = input ("\nWhich door do you take? Red,Blue,Yellow \n")
+                match decision:
+                    case "red":
+                        print("Burned by fire. \nGame Over.")
+                    case "blue":
+                        print("Eaten by beats. \nGame Over.")
+                    case "yellow":
+                        print("You win!")
+                    case _:
+                        print("Game Over.")
+            else: 
+                print("Attacked by trout.\n Game Over.")    
+        else:
+            print("Fall into a hole.\nGame Over.")
+
+
     case 2:
         height = int(input("How tall are you in cm?"))
         bill = 0
